@@ -1,0 +1,108 @@
+/* 기본 스타일 초기화 및 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #121212; /* 어두운 배경색 */
+    color: #f0f0f0; /* 기본 텍스트 색상 */
+    line-height: 1.7;
+}
+
+/* 상단 내비게이션 스타일 */
+nav {
+    position: fixed; /* 화면 상단에 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgba(18, 18, 18, 0.85); /* 반투명 배경 */
+    backdrop-filter: blur(10px); /* 배경 블러 효과 (모던한 느낌) */
+    z-index: 1000;
+    text-align: center;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+nav a:hover {
+    color: #00aaff; /* 마우스 올렸을 때의 포인트 색상 */
+}
+
+/* 메인 섹션 스타일 */
+section {
+    min-height: 100vh; /* 각 섹션이 화면 전체 높이를 차지하도록 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 40px; /* 상단 내비게이션 높이를 고려한 패딩 */
+    border-bottom: 1px solid #222; /* 섹션 구분선 */
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+.content-box {
+    max-width: 800px;
+    text-align: center;
+}
+
+.content-box h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #00aaff; /* 제목 포인트 색상 */
+    margin-bottom: 25px;
+}
+
+.content-box p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #bbbbbb; /* 본문 텍스트 색상 */
+}
+
+.content-box strong {
+    font-weight: 700;
+    color: #ffffff; /* 강조 텍스트 색상 */
+}
+
+/* 모바일 화면 대응 */
+@media (max-width: 768px) {
+    nav li {
+        margin: 0 5px;
+    }
+    nav a {
+        font-size: 0.8rem;
+    }
+    .content-box h2 {
+        font-size: 2rem;
+    }
+    .content-box p {
+        font-size: 1rem;
+    }
+}
